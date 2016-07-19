@@ -5,6 +5,7 @@
     <title></title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="./js/resources/leaderboards.js"></script>
     <script type="text/javascript" src="./js/controllers/leaderboardsController.js"></script>
@@ -26,7 +27,7 @@
       </thead>
 
       <tbody>
-        <tr ng-repeat="leaderboards in LB.all.reverse() | limitTo:20">
+        <tr ng-repeat="leaderboards in LB.all | limitTo:20 | orderBy: 'score' : 'reverse'"> <!--grab all data from database, limit to show only 20, order it by score, and reverse it to show descending order -->
           <td class="text-center">{{leaderboards.name}}</td> <br/>
           <td class="text-center">{{leaderboards.score}}</td>
         </tr>
