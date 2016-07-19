@@ -26,7 +26,7 @@
       </thead>
 
       <tbody>
-        <tr ng-repeat="leaderboards in LB.all">
+        <tr ng-repeat="leaderboards in LB.all.reverse() | limitTo:20">
           <td class="text-center">{{leaderboards.name}}</td> <br/>
           <td class="text-center">{{leaderboards.score}}</td>
         </tr>
