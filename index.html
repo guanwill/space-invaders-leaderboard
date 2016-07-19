@@ -22,7 +22,7 @@
       <thead>
         <tr class="dangerr">
           <th class="col-sm-6 text-center player-name" data-field="name">Name</th>
-          <th class="col-sm-6 text-center player-score" data-field="score">Score</th>
+          <th class="col-sm-6 text-center player-score" data-field="score">Top Scores</th>
         </tr>
       </thead>
 
@@ -32,7 +32,30 @@
           <td class="text-center">{{leaderboards.score}}</td>
         </tr>
       </tbody>
+
+
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+          <tr class="dangerr">
+            <th class="col-sm-6 text-center player-name" data-field="name">Name</th>
+            <th class="col-sm-6 text-center player-score" data-field="score">Latest Scores</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="leaderboards in LB.all.reverse() | limitTo:20 "> <!--grab all data from database, limit to show only 20, order it by score, and reverse it to show descending order -->
+            <td class="text-center">{{leaderboards.name}}</td> <br/>
+            <td class="text-center">{{leaderboards.score}}</td>
+          </tr>
+        </tbody>
     </table>
+
+
+
+
+
+
+
 
     </div>
     </body>
