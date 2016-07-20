@@ -7,8 +7,27 @@
 .heading {
   text-align: center;
   font-family: 'Press Start 2P', cursive;
+  color: yellow;
 }
 
 .player-name, .player-score {
   font-family: 'Press Start 2P', cursive;
+  color: yellow;
+}
+
+body {
+  background: url("https://s31.postimg.org/gptaa6hrf/space.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.name, .score {
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.borderless tbody tr td, .borderless thead tr th   {
+  border: none;
 }
