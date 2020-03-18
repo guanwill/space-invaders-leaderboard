@@ -1,3 +1,5 @@
+_**[General Assembly Project - Not Maintained]**_
+
 # Spacefort Leaderboard
 
 ## Features
